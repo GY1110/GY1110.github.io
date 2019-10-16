@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    MySQL语法大全_自己整理的学习笔记 |
+    
+    熊大</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+  
+  <script src="/js/pace.min.js"></script>
+</head>
+</html>
+<body>
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<main class="content">
+  <section class="outer">
+  
+
+<article id="post-MySQL语法大全-自己整理的学习笔记" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MySQL语法大全_自己整理的学习笔记
+    </h1>
+  
+  
+
+
+
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/2019/10/16/MySQL语法大全-自己整理的学习笔记/" class="article-date">
+  <time datetime="2019-10-16T07:51:54.000Z" itemprop="datePublished">2019-10-16</time>
+</a>
+        
+      </div>
+    
+
+    
+      
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+        <h1 id="MySQL语法大全-自己整理的学习笔记"><a href="#MySQL语法大全-自己整理的学习笔记" class="headerlink" title="MySQL语法大全_自己整理的学习笔记"></a>MySQL语法大全_自己整理的学习笔记</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br></pre></td><td class="code"><pre><span class="line">select * from emp;  #注释</span><br><span class="line">#---------------------------</span><br><span class="line">#----命令行连接MySql---------</span><br><span class="line"> </span><br><span class="line">#启动mysql服务器</span><br><span class="line">net start mysql</span><br><span class="line"> </span><br><span class="line">#关闭 </span><br><span class="line">net stop mysql</span><br><span class="line">  </span><br><span class="line">#进入</span><br><span class="line">mysql -h 主机地址 -u 用户名 －p 用户密码</span><br><span class="line"> </span><br><span class="line">#退出</span><br><span class="line">exit</span><br><span class="line"></span><br><span class="line">status;</span><br><span class="line">显示当前mysql的version的各种信息。</span><br><span class="line"> </span><br><span class="line">#---------------------------</span><br><span class="line">#----MySql用户管理---------</span><br><span class="line"> </span><br><span class="line">#修改密码:首先在DOS 下进入mysql安装路径的bin目录下，然后键入以下命令:</span><br><span class="line">mysqladmin -uroot -p123 password 456;</span><br><span class="line"> </span><br><span class="line">#增加用户</span><br><span class="line">#格式:grant 权限 on 数据库.* to 用户名@登录主机 identified by &apos;密码&apos;</span><br><span class="line">/*</span><br><span class="line">如，增加一个用户user1密码为password1，让其可以在本机上登录， 并对所有数据库有查询、插入、修改、删除的权限。首先用以root用户连入mysql，然后键入以下命令：</span><br><span class="line">grant select,insert,update,delete on *.* to user1@localhost Identified by &quot;password1&quot;;</span><br><span class="line">如果希望该用户能够在任何机器上登陆mysql，则将localhost改为&quot;%&quot;。</span><br><span class="line">如果你不想user1有密码，可以再打一个命令将密码去掉。</span><br><span class="line">grant select,insert,update,delete on mydb.* to user1@localhost identified by &quot;&quot;;</span><br><span class="line">*/</span><br><span class="line"> </span><br><span class="line">grant all privileges on wpj1105.* to sunxiao@localhost identified by &apos;123&apos;;   #all privileges 所有权限</span><br><span class="line"> </span><br><span class="line">#----------------------------</span><br><span class="line">#-----MySql数据库操作基础-----</span><br><span class="line"> </span><br><span class="line">#显示数据库</span><br><span class="line">show databases;</span><br><span class="line"> </span><br><span class="line">#判断是否存在数据库wpj1105,有的话先删除</span><br><span class="line">drop database if exists wpj1105;</span><br><span class="line"> </span><br><span class="line">#创建数据库</span><br><span class="line">create database wpj1105;</span><br><span class="line"> </span><br><span class="line">#删除数据库</span><br><span class="line">drop database wpj1105;</span><br><span class="line"> </span><br><span class="line">#使用该数据库</span><br><span class="line">use wpj1105;</span><br><span class="line"> </span><br><span class="line">#显示数据库中的表</span><br><span class="line">show tables;</span><br><span class="line"> </span><br><span class="line">#先判断表是否存在,存在先删除</span><br><span class="line">drop table if exists student;</span><br><span class="line"> </span><br><span class="line">#创建表</span><br><span class="line">create table student(</span><br><span class="line">id int auto_increment primary key,</span><br><span class="line">name varchar(50),</span><br><span class="line">sex varchar(20),</span><br><span class="line">date varchar(50),</span><br><span class="line">content varchar(100)</span><br><span class="line">)default charset=utf8;</span><br><span class="line"> </span><br><span class="line">#删除表</span><br><span class="line">drop table student;</span><br><span class="line"> </span><br><span class="line">#查看表的结构</span><br><span class="line">describe student;  #可以简写为desc student;</span><br><span class="line"> </span><br><span class="line">#插入数据</span><br><span class="line">insert into student values(null,&apos;aa&apos;,&apos;男&apos;,&apos;1988-10-2&apos;,&apos;......&apos;);</span><br><span class="line">insert into student values(null,&apos;bb&apos;,&apos;女&apos;,&apos;1889-03-6&apos;,&apos;......&apos;);</span><br><span class="line">insert into student values(null,&apos;cc&apos;,&apos;男&apos;,&apos;1889-08-8&apos;,&apos;......&apos;);</span><br><span class="line">insert into student values(null,&apos;dd&apos;,&apos;女&apos;,&apos;1889-12-8&apos;,&apos;......&apos;);</span><br><span class="line">insert into student values(null,&apos;ee&apos;,&apos;女&apos;,&apos;1889-09-6&apos;,&apos;......&apos;);</span><br><span class="line">insert into student values(null,&apos;ff&apos;,&apos;null&apos;,&apos;1889-09-6&apos;,&apos;......&apos;);</span><br><span class="line">#查询表中的数据</span><br><span class="line">select * from student;</span><br><span class="line">select id,name from student;</span><br><span class="line"> </span><br><span class="line">#修改某一条数据</span><br><span class="line">update student set sex=&apos;男&apos; where id=4;</span><br><span class="line"> </span><br><span class="line">#删除数据</span><br><span class="line">delete from student where id=5;</span><br><span class="line"> </span><br><span class="line"># and 且</span><br><span class="line">select * from student where date&gt;&apos;1988-1-2&apos; and date&lt;&apos;1988-12-1&apos;;</span><br><span class="line"> </span><br><span class="line"># or 或</span><br><span class="line">select * from student where date&lt;&apos;1988-11-2&apos; or date&gt;&apos;1988-12-1&apos;;</span><br><span class="line">  </span><br><span class="line">#between</span><br><span class="line">select * from student where date between &apos;1988-1-2&apos; and &apos;1988-12-1&apos;;</span><br><span class="line"> </span><br><span class="line">#in 查询制定集合内的数据</span><br><span class="line">select * from student where id in (1,3,5);</span><br><span class="line"> </span><br><span class="line">#排序 asc 升序  desc 降序</span><br><span class="line">select * from student order by id asc;</span><br><span class="line"> </span><br><span class="line">#分组查询 #聚合函数</span><br><span class="line">select max(id),name,sex from student group by sex;</span><br><span class="line"> </span><br><span class="line">select min(date) from student;</span><br><span class="line"> </span><br><span class="line">select avg(id) as &apos;求平均&apos; from student;</span><br><span class="line"> </span><br><span class="line">select count(*) from student;   #统计表中总数</span><br><span class="line"> </span><br><span class="line">select count(sex) from student;   #统计表中性别总数  若有一条数据中sex为空的话,就不予以统计~</span><br><span class="line"> </span><br><span class="line">select sum(id) from student;</span><br><span class="line"> </span><br><span class="line">#查询第i条以后到第j条的数据(不包括第i条)</span><br><span class="line">select * from student limit 2,5;  #显示3-5条数据</span><br><span class="line"> </span><br><span class="line">#巩固练习</span><br><span class="line">create table c(</span><br><span class="line"> id int primary key auto_increment,</span><br><span class="line"> name varchar(10) not null,</span><br><span class="line"> sex varchar(50) ,  #DEFAULT &apos;男&apos; ,</span><br><span class="line"> age int unsigned, #不能为负值(如为负值 则默认为0)</span><br><span class="line"> sno int unique    #不可重复</span><br><span class="line">);</span><br><span class="line"> </span><br><span class="line">drop table c;</span><br><span class="line">desc c;</span><br><span class="line"> </span><br><span class="line">insert into c (id,name,sex,age,sno) values (null,&apos;涛哥&apos;,&apos;男&apos;,68,1);</span><br><span class="line">insert into c (id,name,sex,age,sno) values (null,&apos;aa&apos;,&apos;男&apos;,68,2);</span><br><span class="line">insert into c (id,name,sex,age,sno) values (null,&apos;平平&apos;,&apos;男&apos;,35,3);</span><br><span class="line">...</span><br><span class="line"> </span><br><span class="line">select * from c;</span><br><span class="line"> </span><br><span class="line">#修改数据</span><br><span class="line">update c set age=66 where id=2;</span><br><span class="line">update c set name=&apos;花花&apos;,age=21,sex=&apos;女&apos; where id=2</span><br><span class="line">delete from c where age=21;</span><br><span class="line"> </span><br><span class="line">#常用查询语句</span><br><span class="line">select name,age ,id from c</span><br><span class="line">select * from c where age&gt;40 and age&lt;60;  #and</span><br><span class="line">select * from c where age&lt;40 or age&lt;60;  #or</span><br><span class="line">select * from c where age between 40 and 60 #between</span><br><span class="line">select * from c where age in (30,48,68,99);     #in 查询指定集合内的数据</span><br><span class="line">select * from c order by age desc;      #order by （asc升序 des降序）</span><br><span class="line"> </span><br><span class="line">#分组查询</span><br><span class="line">select name,max(age) from c group by sex;  #按性别分组查年龄最大值</span><br><span class="line">#聚合函数</span><br><span class="line">select min(age) from c;</span><br><span class="line">select avg(age) as &apos;平均年龄 &apos; from c;</span><br><span class="line">select count(*) from c;  #统计表中数据总数</span><br><span class="line">select sum(age) from c;</span><br><span class="line"> </span><br><span class="line">#修改表的名字</span><br><span class="line">#格式:alter table tbl_name rename to new_name</span><br><span class="line">alter table c rename to a;</span><br><span class="line">  </span><br><span class="line">#表结构修改</span><br><span class="line">create table test</span><br><span class="line">(</span><br><span class="line">id int not null auto_increment primary key, #设定主键</span><br><span class="line">name varchar(20) not null default &apos;NoName&apos;, #设定默认值</span><br><span class="line">department_id int not null,</span><br><span class="line">position_id int not null,</span><br><span class="line">unique (department_id,position_id) #设定唯一值</span><br><span class="line">);</span><br><span class="line"> </span><br><span class="line">#修改表的名字</span><br><span class="line">#格式:alter table tbl_name rename to new_name</span><br><span class="line">alter table test rename to test_rename;</span><br><span class="line"> </span><br><span class="line">#向表中增加一个字段(列)</span><br><span class="line">#格式:alter table tablename add columnname type;/alter table tablename add(columnname type);</span><br><span class="line">alter table test add  columnname varchar(20);</span><br><span class="line"> </span><br><span class="line">#修改表中某个字段的名字</span><br><span class="line">alter table tablename change columnname newcolumnname type;  #修改一个表的字段名</span><br><span class="line">alter table test change name uname varchar(50);</span><br><span class="line"> </span><br><span class="line">select * from test;</span><br><span class="line"> </span><br><span class="line">#表position 增加列test</span><br><span class="line">alter table position add(test char(10));</span><br><span class="line">#表position 修改列test</span><br><span class="line">alter table position modify test char(20) not null;</span><br><span class="line">#表position 修改列test 默认值</span><br><span class="line">alter table position alter test set default &apos;system&apos;;</span><br><span class="line">#表position 去掉test 默认值</span><br><span class="line">alter table position alter test drop default;</span><br><span class="line">#表position 去掉列test</span><br><span class="line">alter table position drop column test;</span><br><span class="line">#表depart_pos 删除主键</span><br><span class="line">alter table depart_pos drop primary key;</span><br><span class="line">#表depart_pos 增加主键</span><br><span class="line">alter table depart_pos add primary key PK_depart_pos</span><br><span class="line">(department_id,position_id);</span><br><span class="line"> </span><br><span class="line">#用文本方式将数据装入数据库表中（例如D:/mysql.txt）</span><br><span class="line">load data local infile &quot;D:/mysql.txt&quot; into table MYTABLE;</span><br><span class="line"> </span><br><span class="line">#导入.sql文件命令（例如D:/mysql.sql）</span><br><span class="line">source d:/mysql.sql;  #或者  /. d:/mysql.sql;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/16/MySQL语法大全-自己整理的学习笔记/" data-id="ck1szcu1d000154rk7q0d7c77"
+         class="article-share-link">Share</a>
+      
+    </footer>
+
+  </div>
+
+  
+    
+  <nav class="article-nav">
+    
+    
+      <a href="/2019/10/16/MySQL语法大全_自己整理的学习笔记/" class="article-nav-link">
+        <strong class="article-nav-caption">Olde posts</strong>
+        <div class="article-nav-title"></div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+    
+  <div class="gitalk" id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'fac550032cd655923886',
+      clientSecret: '9233db2e1566f4b716669ff796ce91a5648884c3',
+      repo: 'gitalk',
+      owner: 'GY1110',
+      admin: ['GY1110'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+  
+
+</article>
+
+
+
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2019 熊大</li>
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>Theme  <a href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+
+<aside class="sidebar sidebar-specter">
+  
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/images/hexo.svg" alt="熊大"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">Archives</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">Gallery</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">About</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        Search
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+  <script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/js/tocbot.min.js"></script>
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+<script src="/js/ocean.js"></script>
+
+   
+</body>
+</html>
