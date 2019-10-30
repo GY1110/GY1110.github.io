@@ -58,8 +58,6 @@
 
     
       
-    <div class="tocbot"></div>
-
 
 
 
@@ -73,48 +71,21 @@
       
 
       
-        <h1 id="jsp内置对象—-登陆页面"><a href="#jsp内置对象—-登陆页面" class="headerlink" title="jsp内置对象—-登陆页面"></a>jsp内置对象—-登陆页面</h1><blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-<ul>
-<li><p>login.jsp页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; contentType=&quot;text/html; charset=utf-8&quot;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   %&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;%@ page import=&quot;java.text.*&quot; %&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;%</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   String path = request.getContextPath();</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   %&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;html&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;head&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;title&gt;Insert title here&lt;/title&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   </span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;/head&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;body&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;h1&gt;用户登录&lt;/h1&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   </span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;!-- 明文的方式通过URL提交数据 --&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;form action=&quot;dologin.jsp&quot; name=&quot;loginForm&quot; method=&quot;get&quot;&gt; </span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   </span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;!-- 将提交的数据封装在HTML header 中，再提交 --&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;form action=&quot;dologin.jsp&quot; name=&quot;loginForm&quot; method=&quot;post&quot;&gt; </span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   　　&lt;table&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   　　　　</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   </span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;tr&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;td&gt;用户名：&lt;/td&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot;/&gt;&lt;/td&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;/tr&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   </span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;tr&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;td&gt;密码：&lt;/td&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;td&gt;&lt;input type=&quot;password&quot; name=&quot;password&quot;/&gt;&lt;/td&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;/tr&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   </span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;tr&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;td colspan=&quot;8&quot;&gt;&lt;input type=&quot;submit&quot; name=&quot;登录&quot;/&gt;&lt;/td&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;/tr&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   </span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   　　&lt;/table&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;/form&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   </span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;/body&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;   &lt;/html&gt;</span><br><span class="line">&gt; &gt; &gt; &gt; &gt;</span><br></pre></td></tr></table></figure>
-</li>
+        <ul>
+<li>login.jsp页面</li>
 </ul>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; contentType=&quot;text/html; charset=utf-8&quot;</span><br><span class="line">%&gt;</span><br><span class="line">&lt;%@ page import=&quot;java.text.*&quot; %&gt;</span><br><span class="line">&lt;%</span><br><span class="line">String path = request.getContextPath();</span><br><span class="line">%&gt;</span><br><span class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;</span><br><span class="line">&lt;title&gt;Insert title here&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;h1&gt;用户登录&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 明文的方式通过URL提交数据 --&gt;</span><br><span class="line">&lt;form action=&quot;dologin.jsp&quot; name=&quot;loginForm&quot; method=&quot;get&quot;&gt; </span><br><span class="line"></span><br><span class="line">&lt;!-- 将提交的数据封装在HTML header 中，再提交 --&gt;</span><br><span class="line">&lt;form action=&quot;dologin.jsp&quot; name=&quot;loginForm&quot; method=&quot;post&quot;&gt; </span><br><span class="line">　　&lt;table&gt;</span><br><span class="line">　　　　</span><br><span class="line"></span><br><span class="line">&lt;tr&gt;</span><br><span class="line">&lt;td&gt;用户名：&lt;/td&gt;</span><br><span class="line">&lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot;/&gt;&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line"></span><br><span class="line">&lt;tr&gt;</span><br><span class="line">&lt;td&gt;密码：&lt;/td&gt;</span><br><span class="line">&lt;td&gt;&lt;input type=&quot;password&quot; name=&quot;password&quot;/&gt;&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line"></span><br><span class="line">&lt;tr&gt;</span><br><span class="line">&lt;td colspan=&quot;8&quot;&gt;&lt;input type=&quot;submit&quot; name=&quot;登录&quot;/&gt;&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line"></span><br><span class="line">　　&lt;/table&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li><p>dologin.jsp页面</p>
+<li>dologin.jsp文件</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;h1&gt;登录成功&lt;/h1&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 
-
-
-</li>
-</ul>
-<blockquote>
-</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/30/jsp内置对象-登录页面/" data-id="ck2d4tp880002zgrk59ox2pzq"
+      <a data-url="http://yoursite.com/2019/10/30/jsp内置对象-登录页面/" data-id="ck2d4zicq0002ycrkfrfw3ugd"
          class="article-share-link">Share</a>
       
     </footer>
